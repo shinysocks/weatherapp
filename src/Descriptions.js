@@ -1,6 +1,8 @@
-const getDescription = (code, isDay) => {
-  console.log(isDay, DESCRIPTIONS[code].day);
-  return (isDay === 1 ? DESCRIPTIONS[code][isDay] : DESCRIPTIONS[code][isDay]);
+export const getDescription = (code, isDay) => {
+  const description = DESCRIPTIONS[code.toString()];
+  if (Boolean(isDay))
+    return [description.day.description, description.day.image];
+  return [description.night.description, description.night.image];
 }
 
 const DESCRIPTIONS = {
