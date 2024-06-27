@@ -1,0 +1,99 @@
+* {
+  line-height: 20px;
+}
+
+.black-rounded {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  background-color: black;
+  color: lightblue;
+  border-radius: 40px;
+
+  filter: drop-shadow(0 0 0.4rem black);
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+
+.horizontal-text {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0px;
+  line-height: 5px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.now {
+  width: 250px;
+  margin: 30px;
+}
+
+.sun {
+  padding-bottom: 10px;
+  width: 55px;
+}
+
+.sun-text {
+  line-height: 0px;
+  font-size: 30px;
+}
+
+.sub-text {
+  line-height: 0px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 18px;
+}
+
+.temperature {
+  font-size: 70px;
+}
+
+.weather-description {
+  font-size: 40px;
+}
+
+.weather-icon {
+  filter: brightness(0) saturate(100%) invert(82%) sepia(4%) saturate(1651%) hue-rotate(148deg) brightness(105%) contrast(87%);
+}
+
+.now-icon {
+  margin-top: 15px;
+  margin-bottom: -20px;
+}
+
+.max-and-min {
+  width: 55px;
+}
+
+.arrow {
+  font-size: 30px;
+}
+
+.max {
+  margin-bottom: 60px;
+}
+
+.bike {
+  background-color: lightblue;
+  padding: 5px;
+  padding-bottom: 13px;
+  border-radius: 80px;
+  line-height: 10px;
+}
+
+.small {
+  width: 50px;
+}

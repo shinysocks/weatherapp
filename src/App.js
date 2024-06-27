@@ -1,8 +1,45 @@
-import CurrentWeather from './CurrentWeather';
-import TomorrowWeather from './TomorrowWeather';
-import MoonPhase from './MoonPhase';
+import Weather from './Weather';
 import react from 'react';
 import { useWeather } from './useWeather';
+import { styled, keyframes } from 'styled-components'
+
+const LoaderAnim = keyframes`
+  0% {
+    width: 200px;
+  }
+
+  50% {
+    width: 275px;
+  }
+
+  100% {
+    width: 200px;
+  }
+`;
+
+
+const Background = styled.div`
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  position: absolute;
+  text-align: center;
+`;
+
+const Loading = styled.svg`
+  animation: 1s infinite linear;
+  animation-name: ${LoaderAnim};
+  filter: drop-shadow(0 0 0.4rem black);
+`;
+
+const Loader = () => {
+  return (
+    <Loading>
+      <circle r='20%' cx='50%' cy='50%' />
+    </Loading>
+  );
+}
 
 function App() {
   // fix later??
@@ -23,11 +60,9 @@ function App() {
   const data = useWeather(url);
 
   return (
-    <div className='background'>
-      <CurrentWeather data={data} />
-      <TomorrowWeather data={data} />
-      <MoonPhase />
-    </div>
+    <Background>
+      { data ? <Weather data={data} /> : <Loader /> }
+    </ Background>
   );
 }
 
